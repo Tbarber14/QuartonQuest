@@ -71,14 +71,12 @@ namespace AI
 
             winningMove move = NegaMax.searchForBestPlay(currentNode, maxDepth, 0, -MAXGAMEBOARD, MAXGAMEBOARD, true);
 
-            //Checks for win by opponent, given the piece chosen
-            //If win it makes it equal to the next child and so on
-            if (piecesOnBoard != 0 && move.winningNode.pieceToPlay != NULLPIECE && difficulty > 1)
-                move.winningNode = AIFunctions.checkForOpponentWin(move.winningNode, null);
-
-            if (boardBlockable && !move.isWin)
+            if (boardBlockable && !move.isWin && piecesOnBoard != MAXGAMEBOARD - 1)
             {
+                // Erases old winning move then adds new move to board.
+                move.winningNode.gameBoard[move.winningNode.moveOnBoard] = null;
                 move.winningNode.gameBoard[positionToBlock] = currentPieces[piece].piece;
+
                 move.winningNode = AIFunctions.checkForOpponentWin(move.winningNode, currentPieces[piece].piece);
                 
                 pieceOnDeck = move.winningNode.pieceToPlay == NULLPIECE ?
@@ -88,7 +86,12 @@ namespace AI
             }
             else
             {
+                if (piecesOnBoard != 0 && move.winningNode.pieceToPlay != NULLPIECE && difficulty > 1)
+                    move.winningNode = AIFunctions.checkForOpponentWin(move.winningNode, null);
+
                 moveToSend = move.winningNode.pieces[move.winningNode.moveOnBoard].piece;
+                //Checks for win by opponent, given the piece chosen
+                //If win it makes it equal to the next child and so on
                 pieceOnDeck = move.winningNode.pieceToPlay == NULLPIECE ?
                     NULLPIECE.ToString() : move.winningNode.pieces[move.winningNode.pieceToPlay].piece;
             }
@@ -181,6 +184,37 @@ namespace AI
                 }
                 pieceMapCount++;
             }
+        }
+		
+		static void Main(string[] args)
+        {
+
+            QuartoSearchTree tree = new QuartoSearchTree();
+            string[] board = { "C3", "C4", "B2", "A4",
+                               "C2", "A2", "D3", "B1",
+                               "B2", "A1", "D1", null,
+                               "B4", "D4", "A3", "C1"
+                             };
+            Piece[] pieces = new Piece[MAXGAMEBOARD];
+            moveData data = new moveData();
+            pieces[0].setValues("A1", false);
+            pieces[1].setValues("A2", false);
+            pieces[2].setValues("A3", false);
+            pieces[3].setValues("A4", false);
+            pieces[4].setValues("B1", false);
+            pieces[5].setValues("B2", false);
+            pieces[6].setValues("B3", true);
+            pieces[7].setValues("B4", false);
+            pieces[8].setValues("C1", false);
+            pieces[9].setValues("C2", false);
+            pieces[10].setValues("C3",false);
+            pieces[11].setValues("C4",false);
+            pieces[12].setValues("D1",false);
+            pieces[13].setValues("D2",false);
+            pieces[14].setValues("D3",false);
+            pieces[15].setValues("D4", false);
+
+            data = tree.generateTree(board, 6, pieces, 3);
         }
     }
     public struct Piece
