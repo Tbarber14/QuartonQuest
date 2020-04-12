@@ -78,7 +78,10 @@ namespace AI
 
             if (boardBlockable && !move.isWin)
             {
+                // Erases old winning move then adds new move to board.
+                move.winningNode.gameBoard[move.winningNode.moveOnBoard] = null;
                 move.winningNode.gameBoard[positionToBlock] = currentPieces[piece].piece;
+
                 move.winningNode = AIFunctions.checkForOpponentWin(move.winningNode, currentPieces[piece].piece);
                 
                 pieceOnDeck = move.winningNode.pieceToPlay == NULLPIECE ?
