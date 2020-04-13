@@ -13,26 +13,8 @@ public class mainMenuGUI : MonoBehaviour
     public GameObject helpPanel;
     public GameObject optionsPanel;
 
-    private AudioSource audio;
 
-
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        audio = GetComponent<AudioSource>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.H))
-        {
-            DisplayHelpPanel();
-        }
-    }
-
-    public void DisplayHelpPanel()
+    public void ToggleHelpPanel()
     {
         if (helpPanel.activeInHierarchy)
             helpPanel.SetActive(false);
