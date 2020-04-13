@@ -12,13 +12,7 @@ public class advanceStoryBoard : MonoBehaviour
     public GameObject OptionsPanel;
 
     // Typewriter effect here: http://answers.unity.com/answers/987268/view.html
-    string[] storyText = new string[] { 
-        "Captain, sensors report that the hull has been breached", 
-        "The Cargo Bar door has been opened", 
-        "We are being boarded", 
-        "Pirates are demanding our valuables", 
-        "We must play them" 
-    };
+    public string[] storyText;
     int currentlyDisplayingText = 0;
     bool typingText = false;
 

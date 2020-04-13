@@ -13,7 +13,6 @@ public class observerMove : MonoBehaviour
     public float forwardForce =  40000f;
     public float upwardForce =   40000f;
     public float zoomForce = 40000f;
-    public string nextScene;
     private Vector3 zero = new Vector3(0, 0, 0);
     // Start is called before the first frame update
     void Start()
@@ -85,11 +84,6 @@ public class observerMove : MonoBehaviour
         rb.velocity = Vector3.zero;
         rb.velocity = Vector3.ClampMagnitude(rb.velocity, 0);
         rb.velocity *= 0.99f;
-
-        if (Input.GetKey("n"))
-        {
-            SceneManager.LoadScene(nextScene);
-        }
 
     }
 }

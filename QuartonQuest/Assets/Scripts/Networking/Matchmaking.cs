@@ -14,6 +14,7 @@ namespace Networking
         [SerializeField] private GameObject JoinGamePanel = null;
         [SerializeField] private GameObject HostGamePanel = null;
         [SerializeField] private GameObject ConnectingPanel = null;
+        [SerializeField] private GameObject LocationPanel = null;
         [SerializeField] private GameObject NameInputPanel = null;
         [SerializeField] private GameObject RoomListItemsPanel = null;
         [SerializeField] private GameObject RoomListItemPrefab = null;
@@ -27,6 +28,7 @@ namespace Networking
         private const string MASTERPLAYERNAMEPROPERTY = "MasterPlayerName";
         private Dictionary<string, GameObject> rooms;
         private Dictionary<string, RoomInfo> cachedRooms;
+        private string sceneToLoad;
 
         private void Awake() => PhotonNetwork.AutomaticallySyncScene = true;
 
@@ -73,8 +75,20 @@ namespace Networking
 
         public void OnCreateButtonClicked()
         {
-            ConnectingPanel.SetActive(true);
+            LocationPanel.SetActive(true);
             NameInputPanel.SetActive(false);
+        }
+
+        public void BackFromLocation()
+        {
+            NameInputPanel.SetActive(true);
+            LocationPanel.SetActive(false);
+        }
+
+        public void OnStartGameClicked()
+        {
+            ConnectingPanel.SetActive(true);
+            LocationPanel.SetActive(false);
             CreateGame();
         }
 
@@ -292,8 +306,23 @@ namespace Networking
                 GUIController.Opponent = GUIController.OpponentType.NETWORK;
 
                 if (PhotonNetwork.IsMasterClient)
-                    PhotonNetwork.LoadLevel(GUIController.SceneNames.Level1);
+                    PhotonNetwork.LoadLevel(sceneToLoad);
             }
+        }
+        public void OnCargoBaySelected(bool isOn)
+        {
+            if (isOn)
+                sceneToLoad = GUIController.SceneNames.Level1;
+        }
+        public void OnQuartonSelected(bool isOn)
+        {
+            if (isOn)
+                sceneToLoad = GUIController.SceneNames.Level2;
+        }
+        public void OnObservatorySelected(bool isOn)
+        {
+            if (isOn)
+                sceneToLoad = GUIController.SceneNames.Level3;
         }
     }
 }

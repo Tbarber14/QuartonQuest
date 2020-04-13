@@ -340,6 +340,7 @@ MonoBehaviour:
   nextScene: Level1Scene
   textBox: {fileID: 3415002831789720886}
   OptionsPanel: {fileID: 2592015700164910391}
+  storyText: []
   keyDelay: 0.1
 --- !u!1 &3415002831081059652
 GameObject:
@@ -654,8 +655,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 40
-  m_fontSizeBase: 40
+  m_fontSize: 35
+  m_fontSizeBase: 35
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

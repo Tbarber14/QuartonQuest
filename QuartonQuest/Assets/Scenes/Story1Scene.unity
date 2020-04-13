@@ -485,6 +485,67 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3415002831055993804, guid: a53c03f107c5bd14fae7593cc70ca133,
+        type: 3}
+      propertyPath: storyText.Array.size
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3415002831055993804, guid: a53c03f107c5bd14fae7593cc70ca133,
+        type: 3}
+      propertyPath: storyText.Array.data[1]
+      value: 'They have been traveling for days at light speed, but the Tetramechs
+        have ended in deep space, lost, and with fuel reserves running low. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 3415002831055993804, guid: a53c03f107c5bd14fae7593cc70ca133,
+        type: 3}
+      propertyPath: storyText.Array.data[0]
+      value: 'After global catastrophes that destroyed their home planet, a small
+        group of Tetramechs are in search of a new planet to call home. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 3415002831055993804, guid: a53c03f107c5bd14fae7593cc70ca133,
+        type: 3}
+      propertyPath: storyText.Array.data[2]
+      value: "In their Cargo Bay they are carrying millions of Tetramechs who uploaded
+        themselves into emergency storage when their planet\u2019s fate was all but
+        decided."
+      objectReference: {fileID: 0}
+    - target: {fileID: 3415002831055993804, guid: a53c03f107c5bd14fae7593cc70ca133,
+        type: 3}
+      propertyPath: storyText.Array.data[3]
+      value: "Suddenly, their ship is attacked by a group of Space Pirates \u2013
+        villainous Tetramechs who long ago abandoned their planet to live a life
+        in space, plundering and any poor space traveler with whom they crossed paths."
+      objectReference: {fileID: 0}
+    - target: {fileID: 3415002831055993804, guid: a53c03f107c5bd14fae7593cc70ca133,
+        type: 3}
+      propertyPath: storyText.Array.data[4]
+      value: "If the Pirates discover the Tetramechs\u2019 precious cargo, all hope
+        would be lost."
+      objectReference: {fileID: 0}
+    - target: {fileID: 3415002831055993804, guid: a53c03f107c5bd14fae7593cc70ca133,
+        type: 3}
+      propertyPath: storyText.Array.data[5]
+      value: "There is still hope though \u2013 these Pirates are notorious for giving
+        their captors a chance of escape, albeit a slim one. The Tetramechs must
+        play the Pirates in a game of Quarto. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 3415002831055993804, guid: a53c03f107c5bd14fae7593cc70ca133,
+        type: 3}
+      propertyPath: storyText.Array.data[6]
+      value: If the Tetramechs win, they keep their ship, but if the Pirates win,
+        they will take the ship for themselves.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3415002831055993804, guid: a53c03f107c5bd14fae7593cc70ca133,
+        type: 3}
+      propertyPath: storyText.Array.data[7]
+      value: "The Pirates are masters of Quarto \u2013 they\u2019ve never been beaten.
+        But with millions of lives in the balance, the Tetramechs have no choice. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 3415002831055993804, guid: a53c03f107c5bd14fae7593cc70ca133,
+        type: 3}
+      propertyPath: storyText.Array.data[8]
+      value: They must win.
+      objectReference: {fileID: 0}
     - target: {fileID: 9160687639032978840, guid: a53c03f107c5bd14fae7593cc70ca133,
         type: 3}
       propertyPath: m_textInfo.characterCount

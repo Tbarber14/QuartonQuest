@@ -415,6 +415,75 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3415002831055993804, guid: a53c03f107c5bd14fae7593cc70ca133,
+        type: 3}
+      propertyPath: storyText.Array.size
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3415002831055993804, guid: a53c03f107c5bd14fae7593cc70ca133,
+        type: 3}
+      propertyPath: storyText.Array.data[0]
+      value: The Pirates were ashamed and angry at being beaten. They left the ship
+        in a rush.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3415002831055993804, guid: a53c03f107c5bd14fae7593cc70ca133,
+        type: 3}
+      propertyPath: storyText.Array.data[1]
+      value: The Tetramechs celebrated, knowing that their people were safe.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3415002831055993804, guid: a53c03f107c5bd14fae7593cc70ca133,
+        type: 3}
+      propertyPath: storyText.Array.data[2]
+      value: Or so they thought.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3415002831055993804, guid: a53c03f107c5bd14fae7593cc70ca133,
+        type: 3}
+      propertyPath: storyText.Array.data[3]
+      value: After returning to their ship, the Pirates fired an ion blast at the
+        Tetramechs ship, rupturing the fuel tank which was already nearly empty.
+        The ship was knocked off its course and began to spin.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3415002831055993804, guid: a53c03f107c5bd14fae7593cc70ca133,
+        type: 3}
+      propertyPath: storyText.Array.data[4]
+      value: "If the Tetramechs didn\u2019t act now, they would be stuck in space. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 3415002831055993804, guid: a53c03f107c5bd14fae7593cc70ca133,
+        type: 3}
+      propertyPath: storyText.Array.data[5]
+      value: "Just then, a nearby planet loomed across the Bridge\u2019s main viewport.
+        Somehow the ships scans hadn\u2019t been able to pick it up. The Tetramechs
+        worked to fly their damaged ship towards the planet. But without the ship\u2019s
+        main systems functioning they couldn\u2019t control the landing and crashed
+        on the surface."
+      objectReference: {fileID: 0}
+    - target: {fileID: 3415002831055993804, guid: a53c03f107c5bd14fae7593cc70ca133,
+        type: 3}
+      propertyPath: storyText.Array.data[6]
+      value: 'Luckily, the planet was inhabited, and by another group of Tetramechs!
+        These natives had left the Tetramechs home planet years ago in search of
+        undiscovered worlds. When they found this one, they decided to call it home. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 3415002831055993804, guid: a53c03f107c5bd14fae7593cc70ca133,
+        type: 3}
+      propertyPath: storyText.Array.data[7]
+      value: The natives had named the planet Quarton.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3415002831055993804, guid: a53c03f107c5bd14fae7593cc70ca133,
+        type: 3}
+      propertyPath: storyText.Array.data[8]
+      value: 'It was a planet rich with resources to help rebuild the Tetramechs
+        civilization. But the natives did not want to share it. So, the Tetramechs
+        challenged the natives to a game of Quarto, in the hopes to win access to
+        the planet. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 3415002831055993804, guid: a53c03f107c5bd14fae7593cc70ca133,
+        type: 3}
+      propertyPath: storyText.Array.data[9]
+      value: "But little did they know, these natives had created the game of Quarto,
+        and were themselves masters of the game. They would not give up their planet
+        without a fight\u2026"
+      objectReference: {fileID: 0}
     - target: {fileID: 3415002831347605138, guid: a53c03f107c5bd14fae7593cc70ca133,
         type: 3}
       propertyPath: m_Texture
