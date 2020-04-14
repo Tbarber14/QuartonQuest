@@ -148,7 +148,7 @@ MonoBehaviour:
   startRotationX: 25
   rotationSmoothing: 30
   target: {fileID: 7485073640766814520}
-  rotationSensitivity: 1
+  rotationSensitivity: 0.1
   rotationLimit: {x: 5, y: 80}
   zAxisDistance: 20
   zAxisStartingDistance: 20

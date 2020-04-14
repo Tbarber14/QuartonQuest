@@ -54,6 +54,8 @@ public class CameraMotionControls : MonoBehaviour {
     private float yRotationAxis;
     private float zoomVelocity;
     private float zoomVelocityZAxis;
+    Vector3 axis;
+    Vector2 lastAxis;
 
     private void Awake () {
         camera = GetComponent<Camera>();
@@ -68,9 +70,14 @@ public class CameraMotionControls : MonoBehaviour {
         xRotationAxis = startRotationY / rotationSpeed;
         yRotationAxis = startRotationX / rotationSpeed;
         zAxisDistance = zAxisStartingDistance;
+
+        lastAxis = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
     }
 
     private void Update () {
+        axis = new Vector3(-(lastAxis.x - Input.mousePosition.x) * 0.1f, -(lastAxis.y - Input.mousePosition.y) * 0.1f, Input.GetAxis("Mouse ScrollWheel"));
+        lastAxis = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
+
         if (!IsEnabled)
             return;
 
@@ -92,8 +99,8 @@ public class CameraMotionControls : MonoBehaviour {
             //That's why we're checking for that before campturing the mouse/finger position.
             //Otherwise, on a computer, the camera would move whenever the cursor moves. 
             if (Input.GetMouseButton(0) && IsEnabled) {
-                xVelocity += Input.GetAxis("Mouse X") * rotationSensitivity;
-                yVelocity -= Input.GetAxis("Mouse Y") * rotationSensitivity;
+                xVelocity += axis.x * rotationSensitivity;
+                yVelocity -= axis.y * rotationSensitivity;
             }
 
             xRotationAxis += xVelocity;
