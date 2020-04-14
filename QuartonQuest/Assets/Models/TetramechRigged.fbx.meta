@@ -1,17 +1,21 @@
 fileFormatVersion: 2
-guid: 2cfe396a7c8ae1448a56619bab4c36f9
+guid: fd4d778b955ef0a4489eb796b4e96bbc
 ModelImporter:
   serializedVersion: 19300
   internalIDToNameTable:
   - first:
       74: 4781951162920444690
     second: Armature|ArmatureAction
-  externalObjects:
   - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material.001
-    second: {fileID: 2100000, guid: d8e2c6565b9a51b44a920fe0c6f1be9b, type: 2}
+      74: -7754662001513109412
+    second: Armature|LoseAction
+  - first:
+      74: 4028858733451052308
+    second: Armature|ThinkingAction
+  - first:
+      74: 8262449587770320579
+    second: Armature|WinAction
+  externalObjects: {}
   materials:
     materialImportMode: 1
     materialName: 0
@@ -31,7 +35,7 @@ ModelImporter:
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 1
+    animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -118,15 +122,15 @@ ModelImporter:
     legStretch: 0.05
     feetSpacing: 0
     globalScale: 1
-    rootMotionBoneName: 
+    rootMotionBoneName: Pelvis
     hasTranslationDoF: 0
     hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   autoGenerateAvatarMappingIfUnspecified: 1
-  animationType: 1
+  animationType: 2
   humanoidOversampling: 1
-  avatarSetup: 0
+  avatarSetup: 1
   additionalBone: 0
   userData: 
   assetBundleName: 
