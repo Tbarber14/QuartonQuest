@@ -64,7 +64,7 @@ namespace AI
                 // Also sets old piece to playable again.
                 move.winningNode.gameBoard[move.winningNode.moveOnBoard] = null;
                 move.winningNode.gameBoard[positionToBlock] = currentPieces[piece].piece;
-                move.winningNode.pieces[piece].setPlayable(true);
+                move.winningNode.pieces[move.winningNode.pieceToPlay].setPlayable(true);
 
                 move.winningNode = AIFunctions.checkForOpponentWin(move.winningNode, currentPieces[piece].piece);
                 
