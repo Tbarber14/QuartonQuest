@@ -154,7 +154,7 @@ MonoBehaviour:
   zAxisStartingDistance: 20
   zoomMode: 1
   cameraZoomRangeFOV: {x: 50, y: 500}
-  cameraZoomRangeZAxis: {x: 10, y: 40}
+  cameraZoomRangeZAxis: {x: 10, y: 35}
   zoomSoothness: 10
   zoomSensitivity: 1
 --- !u!1 &7485073640766814524
