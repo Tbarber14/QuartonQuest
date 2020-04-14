@@ -18,6 +18,7 @@ namespace AI
 
                 recievingNode.pieces[i].setValues(pieceString, piecePlayable);
             }
+
             recievingNode.pieces[pieceToFind].setPlayable(false);
         }
 
@@ -84,31 +85,46 @@ namespace AI
             bool hasWon = true;
             string[] gameBoard;
             string piece;
-            int move;
+            bool piecePlayable;
 
-            
-            for (int i = 0; hasWon && currentNode.parent.children[i] != null; i++)
+            if (winBlockPiece != null)
             {
-                if (winBlockPiece != null)
-                    gameBoard = currentNode.gameBoard;
-                else
-                    gameBoard = currentNode.parent.children[i].gameBoard;
-
-                piece = currentNode.parent.children[i].pieces[currentNode.parent.children[i].pieceToPlay].getPiece();
-                move = currentNode.parent.children[i].moveOnBoard;
-
-                hasWon = isWinOnBoard(gameBoard, piece);
-
-                if (!hasWon && piece != winBlockPiece)
+                for (int i = 0; hasWon && i < QuartoSearchTree.MAXGAMEBOARD; i++)
                 {
-                    if (winBlockPiece == null)
-                        newWinNode = currentNode.parent.children[i];
-                    else
+                    gameBoard = currentNode.gameBoard;
+                    piece = currentNode.pieces[i].getPiece();
+                    piecePlayable = currentNode.pieces[i].getPlayablePiece();
+
+                    if (piecePlayable)
                     {
-                        newWinNode = currentNode.parent.children[i];
-                        newWinNode.gameBoard = gameBoard;
+                        hasWon = isWinOnBoard(gameBoard, piece);
+
+                        if (!hasWon && piece != winBlockPiece)
+                        {
+                            newWinNode = currentNode;
+                            newWinNode.pieceToPlay = i;
+                        }
+
+                        else if (!hasWon && piece == winBlockPiece)
+                            hasWon = true;
                     }
 
+                }
+            }
+
+            else
+            {
+                for (int i = 0; hasWon && currentNode.parent.children[i] != null; i++)
+                {
+                    gameBoard = currentNode.parent.children[i].gameBoard;
+                    piece = currentNode.parent.children[i].pieces[currentNode.parent.children[i].pieceToPlay].getPiece();
+
+                    hasWon = isWinOnBoard(gameBoard, piece);
+
+                    if (!hasWon)
+                    {
+                            newWinNode = currentNode.parent.children[i];
+                    }
                 }
             }
 
